@@ -463,7 +463,8 @@ LoRA 训练中间产物（`training*` / `dataset` / `checkpoint.zip`）、HF 模
 拿到包的人只需 Python 3.11+：
 
 ```bash
-./start.sh          # macOS/Linux；Windows 双击 start.bat
+./start.sh          # macOS/Linux 启动；Windows 双击 start.bat
+./stop.sh           # 停止（Windows 用 stop.bat）
 ```
 
 首次运行自动建 `.venv` 并装依赖，然后开在 http://127.0.0.1:8770。

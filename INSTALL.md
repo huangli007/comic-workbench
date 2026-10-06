@@ -6,12 +6,14 @@
 
 ```bash
 # macOS / Linux
-./start.sh              # 默认 http://127.0.0.1:8770
+./start.sh              # 启动，默认 http://127.0.0.1:8770
 ./start.sh 9000         # 换端口
+./stop.sh               # 停止（按端口找监听进程，不会误杀浏览器/IDE）
 
 # Windows
-start.bat
+start.bat               # 启动
 start.bat 9000
+stop.bat                # 停止
 ```
 
 首次运行会自动创建 `.venv` 并安装后端依赖（约 1-2 分钟）。启动后浏览器打开提示的地址即可。
@@ -88,7 +90,8 @@ python scripts/recover_projects.py
 
 ## 6. 常见问题
 
-**端口被占用** → 换端口：`./start.sh 8888`。本机 8000 常被其他项目占用，默认用 8770。
+**端口被占用** → 先 `./stop.sh` 看是不是工作台自己还开着；换端口用 `./start.sh 8888`。
+服务在后台跑着关不掉时，`./stop.sh` 会先 SIGTERM 优雅退出、10 秒后再强制结束。
 
 **启动报缺依赖** → 删掉 `.venv` 重跑 `start.sh`；或手动 `.venv/bin/pip install -r backend/requirements.txt`。
 
