@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f5f6f8;
+}
+.page { max-width: 1280px; margin: 0 auto; padding: 20px; }
+.panel-card { background: #fff; border-radius: 8px; }
+.panel-img { width: 100%; display: block; border-radius: 4px; background: #eee; }
+.status-tag { margin-right: 6px; }
+.candidate-thumb {
+  width: 86px; height: 120px; object-fit: cover;
+  border: 2px solid transparent; border-radius: 4px; cursor: pointer;
+}
+.candidate-thumb.selected { border-color: #e6a23c; box-shadow: 0 0 0 2px rgba(230,162,60,.3); }
+.muted { color: #909399; font-size: 12px; }
+.dialogue-item { padding: 4px 0; border-bottom: 1px dashed #ebeef5; }

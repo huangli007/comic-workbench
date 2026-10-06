@@ -1,0 +1,34 @@
+# ---- 依赖与虚拟环境 ----
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vite/
+
+# ---- 本地数据：作品、数据库、导出、打包产物 ----
+# 作品数据与数据库属于个人内容，不入库（可用 scripts/package.sh --with-data 单独备份）
+projects/
+comic_workbench.db
+comic_workbench.db-journal
+comic_workbench.db-wal
+/dist/
+*.cbz
+*.pdf
+
+# ---- 个人工作记录（WorkBuddy 项目记忆）----
+.workbuddy/
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---- 本地模型权重（体积大，按 README 自行下载）----
+models/
+*.gguf
+*.safetensors
