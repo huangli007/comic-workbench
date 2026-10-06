@@ -7,7 +7,7 @@
 
 **环境要求**：Python 3.11+ 即可跑起界面与全部非生成流程；出图后端按平台选——
 Apple Silicon 走 MLX（mflux + FLUX.2 Klein 4B，16GB 内存实测可用）、任意平台走 ComfyUI、无 GPU 用 `mock`。
-快速开始见 [INSTALL.md](deploy/INSTALL.md) 或直接 `./scripts/package.sh && tar -xzf dist/*.tar.gz`。
+快速开始见 [INSTALL.md](INSTALL.md) 或直接 `./scripts/package.sh && tar -xzf dist/*.tar.gz`。
 
 ---
 

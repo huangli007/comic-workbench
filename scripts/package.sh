@@ -55,10 +55,10 @@ rsync -a "${EXCLUDES[@]}" "$ROOT/frontend/" "$STAGE/frontend/"
 rsync -a "${EXCLUDES[@]}" "$ROOT/scripts/" "$STAGE/scripts/"
 rsync -a "${EXCLUDES[@]}" "$ROOT/workflows/" "$STAGE/workflows/"
 
-# 启动脚本与安装说明提到包根，方便用户直接 ./start.sh
-cp "$ROOT/deploy/start.sh" "$STAGE/start.sh"
-cp "$ROOT/deploy/start.bat" "$STAGE/start.bat"
-cp "$ROOT/deploy/INSTALL.md" "$STAGE/INSTALL.md"
+# 启动脚本与安装说明本来就在项目根（deploy/ 只是它们的源目录），直接带上
+for f in start.sh start.bat INSTALL.md; do
+  [ -f "$ROOT/$f" ] && cp "$ROOT/$f" "$STAGE/$f"
+done
 chmod +x "$STAGE/start.sh" "$STAGE/scripts/package.sh" 2>/dev/null || true
 
 cp "$ROOT/README.md" "$STAGE/README.md"
